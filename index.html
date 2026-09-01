@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIREA - Производитель бытовой химии</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-text">MIREA</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#" data-page="home" class="nav-link active">Главная</a></li>
+                    <li><a href="#" data-page="company" class="nav-link">Компания</a></li>
+                    <li><a href="#" data-page="products" class="nav-link">Продукция</a></li>
+                    <li><a href="#" data-page="wholesale" class="nav-link wholesale-link">Оптовые закупки</a></li>
+                    <li><a href="#" data-page="contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="cart-btn" id="cartBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Page -->
+        <section class="page home-page active" id="home">
+            <div class="hero">
+                <div class="hero-bg"></div>
+                <div class="container hero-content">
+                    <h1 class="hero-title">MIREA</h1>
+                    <p class="hero-subtitle">Профессиональная бытовая химия<br>от производителя</p>
+                    <p class="hero-desc">Гели для душа, жидкое мыло и автошампуни премиум качества</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" data-page="products">Каталог продукции</button>
+                        <button class="btn btn-outline" data-page="wholesale">Оптовикам</button>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="features">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🏭</div>
+                            <h3>Собственное производство</h3>
+                            <p>Контроль качества на всех этапах производства</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📦</div>
+                            <h3>Опт и розница</h3>
+                            <p>Выгодные условия для всех типов заказов</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">✨</div>
+                            <h3>Премиум качество</h3>
+                            <p>Современные формулы и натуральные компоненты</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🚚</div>
+                            <h3>Быстрая доставка</h3>
+                            <p>Отправляем продукцию по всей России</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-preview">
+                <div class="container">
+                    <h2 class="section-title">Почему выбирают MIREA</h2>
+                    <div class="about-grid">
+                        <div class="about-item">
+                            <div class="about-number">10+</div>
+                            <p>Лет опыта в производстве</p>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-number">500+</div>
+                            <p>Довольных клиентов</p>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-number">100%</div>
+                            <p>Контроль качества</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Company Page -->
+        <section class="page company-page" id="company">
+            <div class="container page-container">
+                <h1 class="page-title">О компании</h1>
+                <div class="company-content">
+                    <div class="coming-soon">
+                        <div class="coming-soon-icon">🚧</div>
+                        <h2>Раздел в разработке</h2>
+                        <p>Мы работаем над обновлением информации о нашей компании.<br>Скоро здесь появится подробная информация о MIREA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Page -->
+        <section class="page products-page" id="products">
+            <div class="container page-container">
+                <h1 class="page-title">Продукция</h1>
+                
+                <div class="product-filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="body">Body</button>
+                    <button class="filter-btn" data-filter="auto">Auto</button>
+                </div>
+
+                <div class="product-categories" id="productCategories">
+                    <!-- Categories will be loaded here -->
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Wholesale Page -->
+        <section class="page wholesale-page" id="wholesale">
+            <div class="container page-container">
+                <h1 class="page-title">Оптовые закупки</h1>
+                <div class="wholesale-content">
+                    <p class="wholesale-intro">Заполните форму, и наш менеджер свяжется с вами для обсуждения условий сотрудничества</p>
+                    
+                    <form class="wholesale-form" id="wholesaleForm">
+                        <div class="form-group">
+                            <label for="wsName">Ваше имя *</label>
+                            <input type="text" id="wsName" name="name" required placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label for="wsEmail">Email *</label>
+                            <input type="email" id="wsEmail" name="email" required placeholder="example@company.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="wsPhone">Телефон *</label>
+                            <input type="tel" id="wsPhone" name="phone" required placeholder="+7 (999) 000-00-00">
+                        </div>
+                        <div class="form-group">
+                            <label for="wsCompany">Название компании</label>
+                            <input type="text" id="wsCompany" name="company" placeholder="ООО «Компания»">
+                        </div>
+                        <div class="form-group">
+                            <label for="wsMessage">Сообщение *</label>
+                            <textarea id="wsMessage" name="message" rows="5" required placeholder="Расскажите о вашем бизнесе и интересующей продукции"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Page -->
+        <section class="page contacts-page" id="contacts">
+            <div class="container page-container">
+                <h1 class="page-title">Контакты</h1>
+                
+                <div class="contacts-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>Адрес</h3>
+                                <p>г. Дербент, ул. Шоссейная, д 26</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h3>Телефон</h3>
+                                <p><a href="tel:+79384900111">+7 (938) 490-01-11</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h3>Email для заказов</h3>
+                                <p><a href="mailto:order@mireacare.ru">order@mireacare.ru</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🤝</div>
+                            <div>
+                                <h3>Email для сотрудничества</h3>
+                                <p><a href="mailto:cooperation@mireacare.ru">cooperation@mireacare.ru</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <div id="map" class="map-placeholder">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=48.287197%2C42.055321&z=15&pt=48.287197,42.055321" width="100%" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content cart-modal">
+            <button class="modal-close" id="cartModalClose">&times;</button>
+            <h2 class="modal-title">Корзина</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-total" id="cartTotal">
+                <span>Итого:</span>
+                <span class="total-price">0 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content checkout-modal">
+            <button class="modal-close" id="checkoutModalClose">&times;</button>
+            <h2 class="modal-title">Оформление заказа</h2>
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-group">
+                    <label for="orderName">Ваше имя *</label>
+                    <input type="text" id="orderName" name="name" required placeholder="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон *</label>
+                    <input type="tel" id="orderPhone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="orderEmail">Email *</label>
+                    <input type="email" id="orderEmail" name="email" required placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="orderAddress">Адрес доставки *</label>
+                    <textarea id="orderAddress" name="address" rows="3" required placeholder="Город, улица, дом, квартира"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" name="comment" rows="2" placeholder="Пожелания к доставке"></textarea>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Ваш заказ:</h3>
+                    <div id="orderSummary"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content success-modal">
+            <div class="success-icon">✓</div>
+            <h2>Заказ успешно оформлен!</h2>
+            <p>Менеджер свяжется с вами в ближайшее время для подтверждения заказа.</p>
+            <button class="btn btn-primary" id="successClose">Хорошо</button>
+        </div>
+    </div>
+
+    <!-- Wholesale Success Modal -->
+    <div class="modal" id="wholesaleSuccessModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content success-modal">
+            <div class="success-icon">✓</div>
+            <h2>Заявка отправлена!</h2>
+            <p>Наш менеджер свяжется с вами в ближайшее время для обсуждения условий сотрудничества.</p>
+            <button class="btn btn-primary" id="wholesaleSuccessClose">Хорошо</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">MIREA</span>
+                <p>Профессиональная бытовая химия от производителя</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" data-page="home">Главная</a>
+                <a href="#" data-page="company">Компания</a>
+                <a href="#" data-page="products">Продукция</a>
+                <a href="#" data-page="wholesale">Оптовые закупки</a>
+                <a href="#" data-page="contacts">Контакты</a>
+            </div>
+            <div class="footer-contact">
+                <p>г. Дербент, ул. Шоссейная, д 26</p>
+                <p><a href="tel:+79384900111">+7 (938) 490-01-11</a></p>
+                <p><a href="mailto:order@mireacare.ru">order@mireacare.ru</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 MIREA. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
